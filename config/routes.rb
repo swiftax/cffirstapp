@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
+ root 'static_pages#landing_page'
+
+  get "home"  =>  "pages#home"
+  get "about" => "static_pages#about" 
+  get "contact" => "static_pages#contact" 
 
   devise_for :users
-  root 'pages#home'
+ 
 
-  get "about" => "pages#about" 
-  get "contact" => "pages#contact" 
-  
   resources :products
+
+  resources :orders, only: [:index, :show, :new, :create]
+  #limiting specific actions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
