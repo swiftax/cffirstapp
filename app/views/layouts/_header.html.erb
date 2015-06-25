@@ -25,6 +25,15 @@
         <% else %>             
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
+        <div class="container">
+        <%= form_tag("/products", method: "get", class: "navbar-form") do %>
+          <%= label_tag(:q, "Search for:", class:"label label-primary") %>
+          <%= text_field_tag(:q, "coffee", class:"form-control")%>
+          <%= submit_tag("Search", class:"btn btn-primary") %>
+        <% end %>
+        </div>
+        </div>
+    
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->

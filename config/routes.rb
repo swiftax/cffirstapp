@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
  root 'static_pages#landing_page'
 
-  get "home"  =>  "pages#home"
   get "about" => "static_pages#about" 
   get "contact" => "static_pages#contact" 
 
   devise_for :users
- 
+  
 
   resources :products
 
