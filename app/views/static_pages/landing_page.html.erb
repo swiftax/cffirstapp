@@ -1,25 +1,60 @@
-
-<div class="main-header">
-<div class="jumbotron">
 <h1>Welcome to my App!</h1>
-	<p>
-	<% if user_signed_in? %>
-	<%= link_to "New Product", new_product_path , class: "btn btn-success btn-lg" %>
-	<%= link_to "View Products", products_path , class: "btn btn-primary btn-lg" %>
-	<%= link_to "New Order", new_order_path, class: "btn btn-danger btn-lg"%>
-	<%= link_to "View Orders", orders_path, class: "btn btn-danger btn-lg"%>
-	<% else %>		
-	</p>
-
-<p>
+    <p>
+    <% if user_signed_in? %>
+    <%= link_to "New Product", new_product_path , class: "btn btn-success btn-lg" %>
+    <%= link_to "View Products", products_path , class: "btn btn-primary btn-lg" %>
+    <%= link_to "New Order", new_order_path, class: "btn btn-danger btn-lg"%>
+    <%= link_to "View Orders", orders_path, class: "btn btn-danger btn-lg"%>
+    <% else %>      
+    </p>
+    <p>
 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
 </p>
-	<% end %>	
-</div>
-</div>
+    <% end %>
+<div class="carousel slide" data-interval="2000" data-ride="carousel" id=
+    "carousel-example-generic">
+        <!-- Indicators -->
+        
+        <ol class="carousel-indicators">
 
-<div class="container">
-<h2>Feature Product:</h2>
-<% @featured_product.name %>
-</div>
+            <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+
+            <li data-slide-to="1" data-target="#carousel-example-generic"></li>
+
+            <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+        </ol><!-- Wrapper for slides -->
+
+        <div class="carousel-inner" role="listbox">
+
+            <% @products.each do |product| %>
+            <div class="item <%=" active" if product == @products.first %>">
+                <%= image_tag(product.image_url) %>
+                <div class="carousel-caption">
+                <%= product.name %>
+                </div>
+            </div>
+            <div class="item">
+                <%= image_tag(product.image_url) %>
+                <div class="carousel-caption">
+                <%= product.name %>
+                </div>
+            </div>
+            <div class="item">
+                  <%= image_tag(product.image_url) %>
+                <div class="carousel-caption">
+                <%= product.name %>
+                </div>
+            </div>
+            <% end %>
+
+        </div><!-- Left and right controls -->
+
+        <a class="left carousel-control" data-slide="prev" href=
+        "#carousel-example-generic"><span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span></a> <a class=
+        "right carousel-control" data-slide="next" href=
+        "#carousel-example-generic"><span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span></a>
+    </div>
+
