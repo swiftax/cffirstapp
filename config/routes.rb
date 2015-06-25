@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "about" => "static_pages#about" 
   get "contact" => "static_pages#contact" 
 
+  post 'static_pages/thank_you'
+
   devise_for :users
   
 
