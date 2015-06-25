@@ -24,9 +24,9 @@
 
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-brand {
-	font-weight: 700;
+	font-weight: 900;
 	text-transform: uppercase;
-	color: #333;
+	color: #000;
 }
 
 .navbar-default .navbar-toggle {
@@ -130,4 +130,26 @@
   }
 }
 
+.btn-custom {
+  background-color: #593C1F;
+  color: #fff;
+  border: 1px #593C1F solid;
+}
 
+.btn-custom:hover {
+  background-color: #fff;
+  color: #593C1F;
+  border: 1px #fff solid;
+}
+
+.btn-custom2 {
+  background-color: #fff;
+  color: #593C1F;
+  border: 1px #593C1F solid;
+}
+
+.btn-custom2:hover {
+  background-color: #593C1F;
+  color: #fff;
+  border: 1px #593C1F solid;
+}
