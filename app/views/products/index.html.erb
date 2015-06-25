@@ -1,7 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+<div class="jumbotron">
+    
+  <p id="notice"><%= notice %></p>  
 
-<h1>Listing Products</h1>
 
+
+    <div class="panel-heading products-heading"><h1>Listing Products </h1></div>
+</div>
+<div class="panel-body">
+    
 <table class="table">
   <thead>
     <tr>
@@ -31,5 +38,10 @@
 </table>
 
 <br>
+</div>
 
-<%= link_to 'New Product', new_product_path %>
+<div class="panel-footer">
+  <%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+  </div>
+
+</div>

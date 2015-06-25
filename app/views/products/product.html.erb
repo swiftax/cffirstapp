@@ -1,0 +1,5 @@
+<!<% @products.each do |product| %>
+<!<%= render product %>
+<!<% end %>
+
+<%= render partial: "product", collection: @products %>

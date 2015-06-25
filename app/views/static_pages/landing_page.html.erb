@@ -1,25 +1,8 @@
-<div class="jumbotron intro">
-<h1>Welcome to my App!</h1>
-    <p>
-    <% if user_signed_in? %>
-    <%= link_to "New Product", new_product_path , class: "btn btn-success btn-lg" %>
-    <%= link_to "View Products", products_path , class: "btn btn-primary btn-lg" %>
-    <%= link_to "New Order", new_order_path, class: "btn btn-danger btn-lg"%>
-    <%= link_to "View Orders", orders_path, class: "btn btn-danger btn-lg"%>
-    <% else %>      
-    </p>
-    <p>
-<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
-</p>
-    <% end %>
-    </div>
-<div class="carousel slide" data-interval="2000" data-ride="carousel" id=
+<div class="carousel slide" data-interval="5000" data-ride="carousel" id=
     "carousel-example-generic">
         <!-- Indicators -->
         
         <ol class="carousel-indicators">
-
             <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
 
             <li data-slide-to="1" data-target="#carousel-example-generic"></li>
@@ -31,21 +14,26 @@
 
             <% @products.each do |product| %>
             <div class="item <%=" active" if product == @products.first %>">
-                <%= image_tag(product.image_url) %>
+x                <%= image_tag(product.image_url) %>
+                <div class="container">
                 <div class="carousel-caption">
-                <%= product.name %>
+<h1>Welcome to my App!</h1>
+    <p>
+    <% if user_signed_in? %>
+    <%= link_to "New Product", new_product_path , class: "btn btn-success btn-lg" %>
+    <%= link_to "View Products", products_path , class: "btn btn-primary btn-lg" %>
+    <%= link_to "New Order", new_order_path, class: "btn btn-danger btn-lg"%>
+    <%= link_to "View Orders", orders_path, class: "btn btn-danger btn-lg"%>
+    <% else %>      
+    </p>
+
+<p>
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
+</p>
+    <% end %>
+              <p>  <%= product.name %> </p>
                 </div>
-            </div>
-            <div class="item">
-                <%= image_tag(product.image_url) %>
-                <div class="carousel-caption">
-                <%= product.name %>
-                </div>
-            </div>
-            <div class="item">
-                  <%= image_tag(product.image_url) %>
-                <div class="carousel-caption">
-                <%= product.name %>
                 </div>
             </div>
             <% end %>
