@@ -3,13 +3,13 @@ class StaticPagesController < ApplicationController
   	@featured_product = Product.first
   	@products = Product.limit(3)
   end
-  	def thank_you
-  		@name = params[:name]
-  		@email = params [:email]
-  		@message = params [:message]
-		ActionMailer::Base.mail(:from => @email,
-					:to => 'tonyt84@gmail.com', 
-					:subject => "Welcome to My Awesome Site #{@name}", 
-					:body => @message).deliver
-	end
+  def thank_you
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+  ActionMailer::Base.mail(:from => @email, 
+                          :to => 'tony@swiftax.com', 
+                          :subject => "Welcome to My Awesome Site #{@name} ", 
+                          :body => @message).deliver
+  end
 end
