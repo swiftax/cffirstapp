@@ -12,7 +12,7 @@
 
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-            <img class="first slide" src="https://download.unsplash.com/44/fN6hZMWqRHuFET5YoApH_StBalmainCoffee.jpg">
+            <img class="first-slide" src="https://download.unsplash.com/44/fN6hZMWqRHuFET5YoApH_StBalmainCoffee.jpg">
                 <div class="container">
                 <div class="carousel-caption">
 <h1>Welcome to my App!</h1>
@@ -33,7 +33,50 @@
                 </div>
                 </div>
             </div>
+            <div class="item">
+            <img class="second-slide" src="https://download.unsplash.com/photo-1422207134147-65fb81f59e38">
+                <div class="container">
+                <div class="carousel-caption">
+<h1>Welcome to my App!</h1>
+    <p>
+    <% if user_signed_in? %>
+    <%= link_to "New Product", new_product_path , class: "btn btn-success btn-lg btn-custom" %>
+    <%= link_to "View Products", products_path , class: "btn btn-primary btn-lg btn-custom2" %>
+    <%= link_to "New Order", new_order_path, class: "btn btn-danger btn-lg btn-custom"%>
+    <%= link_to "View Orders", orders_path, class: "btn btn-danger btn-lg btn-custom2"%>
+    <% else %>      
+    </p>
 
+<p>
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg btn-custom" %>
+<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg btn-custom2" %>
+</p>
+    <% end %>
+                </div>
+                </div>
+            </div>
+                        <div class="item">
+            <img class="third-slide" src="https://download.unsplash.com/photo-1422310299561-e3b8b45d859f">
+                <div class="container">
+                <div class="carousel-caption">
+<h1>Welcome to my App!</h1>
+    <p>
+    <% if user_signed_in? %>
+    <%= link_to "New Product", new_product_path , class: "btn btn-success btn-lg btn-custom" %>
+    <%= link_to "View Products", products_path , class: "btn btn-primary btn-lg btn-custom2" %>
+    <%= link_to "New Order", new_order_path, class: "btn btn-danger btn-lg btn-custom"%>
+    <%= link_to "View Orders", orders_path, class: "btn btn-danger btn-lg btn-custom2"%>
+    <% else %>      
+    </p>
+
+<p>
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg btn-custom" %>
+<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg btn-custom2" %>
+</p>
+    <% end %>
+                </div>
+                </div>
+            </div>
         </div><!-- Left and right controls -->
 
         <a class="left carousel-control" data-slide="prev" href=
