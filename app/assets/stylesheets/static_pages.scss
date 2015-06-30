@@ -18,20 +18,33 @@
 
 .navbar-inverse .navbar-nav > li:hover,
 .navbar-inverse .navbar-brand:hover {
-  background-color: #333;
+  background-color: #a55d2c;
   border: 1px solid #000;
 }
 
-.navbar-inverse .navbar-nav > li > a,
-.navbar-inverse .navbar-brand {
-	font-weight: 900;
+.navbar-inverse .navbar-nav > li > a {
+	font-weight: 500;
 	text-transform: uppercase;
-	color: #000;
+	color: #fff;
+}
+
+.navbar-inverse .subpage_nav > li > a {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navbar-inverse .navbar-brand {
+  background-color: #fff;
+  color: #a55d2c;
+  border: #23270a 2px solid;
+  border-radius: 1.25em;
 }
 
 .navbar-default .navbar-toggle {
   background-color: #333;
 }
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -126,26 +139,26 @@
 }
 
 .btn-custom {
-  background-color: #593C1F;
+  background-color: #a55d2c;
   color: #fff;
-  border: 1px #593C1F solid;
+  border: 1px #a55d2c solid;
 }
 
 .btn-custom:hover {
   background-color: #fff;
-  color: #593C1F;
+  color: #a55d2c;
   border: 1px #fff solid;
 }
 
 .btn-custom2 {
   background-color: #fff;
-  color: #593C1F;
-  border: 1px #593C1F solid;
+  color: #a55d2c;
+  border: 1px #a55d2c solid;
 }
 
 .btn-custom2:hover,
 .btn-custom2:active {
-  background-color: #593C1F;
+  background-color: #a55d2c;
   color: #fff;
   border: 1px #593C1F solid;
 }
@@ -153,7 +166,4 @@
 /* SUBPAGES 
 ______________________________________*/
 
-.square {
-  border: red solid 1px;
-}
 

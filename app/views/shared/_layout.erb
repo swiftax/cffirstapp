@@ -1,4 +1,3 @@
-<% if user_signed_in? %>
 <div class="carousel slide" data-interval="5000" data-ride="carousel" id=
     "carousel-example-generic">
         <!-- Indicators -->
@@ -12,9 +11,8 @@
         </ol><!-- Wrapper for slides -->
 
         <div class="carousel-inner" role="listbox">
-            <% @products.each do |product| %>
-            <div class="item <%=" active" if product == @products.first %>">
-               <%= image_tag(product.image_url) %>
+            <div class="item active">
+            <img class="first slide" src="https://download.unsplash.com/44/fN6hZMWqRHuFET5YoApH_StBalmainCoffee.jpg">
                 <div class="container">
                 <div class="carousel-caption">
 <h1>Welcome to my App!</h1>
@@ -32,11 +30,9 @@
 <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg btn-custom2" %>
 </p>
     <% end %>
-              <p>  <%= product.name %> </p>
                 </div>
                 </div>
             </div>
-            <% end %>
 
         </div><!-- Left and right controls -->
 
@@ -48,6 +44,3 @@
         <span class="sr-only">Next</span></a>
     </div>
 
-<% else %>
-<%= render :partial => "shared/layout" %>
-<% end %>
