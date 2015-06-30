@@ -13,6 +13,7 @@ gem 'jbuilder'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'cancancan'
+gem 'rolify'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
