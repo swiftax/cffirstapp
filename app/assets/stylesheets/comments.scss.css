@@ -1,0 +1,9 @@
+#comment_body.form-control {
+	height: 10em;
+	width: 100%;
+	resize: none;
+}
+
+.rating {
+	margin: 0.5em 0 1em 0;
+}

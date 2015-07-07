@@ -1,0 +1,210 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.center {
+  text-align: center;
+}
+
+.navbar-inverse {
+	background-color:transparent;
+	border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li:hover,
+.navbar-inverse .navbar-brand:hover {
+  background-color: #a55d2c;
+  border: 1px solid #000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.navbar-inverse .subpage_nav > li > a {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navbar-inverse .navbar-brand {
+  background-color: #fff;
+  color: #a55d2c;
+  border: #23270a 2px solid;
+  border-radius: 1.25em;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: #333;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.lp-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 100%;
+  margin-bottom: 4em;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  margin-bottom: 20em;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 60em;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 35em;
+  background-color: #777;
+  }
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 35em;
+  }
+    .carousel-caption h1 {
+    margin-top: 1em ;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+.btn-primary {
+  background-color: #a55d2c;
+  color: #fff;
+  border: 1px #a55d2c solid;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #a55d2c;
+  border: 1px #fff solid;
+}
+
+.btn-default {
+  background-color: #fff;
+  color: #a55d2c;
+  border: 1px #a55d2c solid;
+}
+
+.btn-default:hover,
+.btn-default:active {
+  background-color: #a55d2c;
+  color: #fff;
+  border: 1px #593C1F solid;
+}
+
+.navbar-form {
+  position: absolute;
+  margin-top: 1em;
+  margin-right: 0.25em;
+}
+
+.navbar-form > .label {
+  display: none;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+
+.main-section {
+  text-align: center;
+}
+
+#message.form-control {
+  height: 15em;
+  resize: none;
+}

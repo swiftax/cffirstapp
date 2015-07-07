@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coffee and More</title>
+    <meta name="viewport" content="width=device-width = 1.0,initial-scale = 1.0" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if current_page? (root_path) %>
+<%= render 'layouts/lpheader' %>
+<% else %>
+<%= render 'layouts/header' %>
+<% end %>
+      
+        		
+		<%= yield %>		
+            <% flash.each do |name, msg| %>
+          <%= content_tag(:div, msg, class:"alert alert-#{name}") %>
+        <% end %>
+            
+<%= render 'layouts/footer' %>
+
+</body>
+</html>
