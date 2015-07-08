@@ -14,7 +14,6 @@ class User < ActiveRecord::Base
 
 
 
-
 private
 
   def welcome_email 
