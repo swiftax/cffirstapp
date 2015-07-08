@@ -18,6 +18,7 @@ gem 'ratyrate'
 gem 'hirb'
 gem 'will_paginate'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -29,7 +30,16 @@ gem 'will_paginate'
 
 group :development, :test do 
 	gem 'sqlite3'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+   gem 'guard-rspec'
+   gem 'capybara'
+   gem 'spring-commands-rspec'
+  gem 'vcr'
+end
+
+group :test do
+  gem 'webmock'
 end
 
 group :production do

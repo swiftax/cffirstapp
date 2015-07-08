@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
   post '/rate' => 'rater#create', :as => 'rate'
 
  root 'static_pages#landing_page'
