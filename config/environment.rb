@@ -14,3 +14,6 @@ ActionMailer::Base.smtp_settings = {
   :domain         => 'herokuapp.com',
   :enable_starttls_auto => true
 }
+
+
+WillPaginate.per_page = 5

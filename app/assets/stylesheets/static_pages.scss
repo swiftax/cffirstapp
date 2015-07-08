@@ -160,32 +160,51 @@
     line-height: 1.4;
   }
 }
-.btn-custom {
+.btn-primary {
   background-color: #a55d2c;
   color: #fff;
   border: 1px #a55d2c solid;
 }
 
-.btn-custom:hover {
+.btn-primary:hover {
   background-color: #fff;
   color: #a55d2c;
   border: 1px #fff solid;
 }
 
-.btn-custom2 {
+.btn-default {
   background-color: #fff;
   color: #a55d2c;
   border: 1px #a55d2c solid;
 }
 
-.btn-custom2:hover,
-.btn-custom2:active {
+.btn-default:hover,
+.btn-default:active {
   background-color: #a55d2c;
   color: #fff;
   border: 1px #593C1F solid;
 }
 
-/* SUBPAGES 
-______________________________________*/
+.navbar-form {
+  position: absolute;
+  margin-top: 1em;
+  margin-right: 0.25em;
+}
+
+.navbar-form > .label {
+  display: none;
+}
+
+footer {
+  margin-top: 1em;
+}
 
 
+.main-section {
+  text-align: center;
+}
+
+#message.form-control {
+  height: 15em;
+  resize: none;
+}

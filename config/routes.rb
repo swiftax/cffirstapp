@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
+
  root 'static_pages#landing_page'
   
   get "about" => "static_pages#about" 
@@ -6,10 +8,15 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations'}
   
 
-  resources :products
+  resources :products do
+    resources :comments
+  end
+  resources :users
+  
+  resources :surveys
 
   resources :orders, only: [:index, :show, :new, :create]
   #limiting specific actions

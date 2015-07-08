@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.all.order("created_at DESC")
+    @comments = Comment.where(:product_id => @product.id).paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /products/new
@@ -30,7 +32,6 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
