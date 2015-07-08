@@ -11,6 +11,6 @@ class UserMailer < ApplicationMailer
 	 def registration(first_name, email)
     	@first_name = first_name
          mail(:from => "tony@swiftax.com",
-         			:to => email
+         			:to => "#{email}")
 	end
 end
