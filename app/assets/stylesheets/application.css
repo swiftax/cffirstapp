@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.alert-info {
+	background-color: transparent;
+	margin-top: 5em;
+	border: none;
+}

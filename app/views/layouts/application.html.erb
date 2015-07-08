@@ -14,9 +14,7 @@
 <%= render 'layouts/header' %>
 <% end %>
       
-        <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class:"alert alert-#{name}") %>
-        <% end %>		
+        <%= render partial: "layouts/messages", flash: flash %> 		
 		<%= yield %>		
             
             
