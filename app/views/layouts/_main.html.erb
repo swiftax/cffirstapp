@@ -17,6 +17,8 @@
                <%= image_tag(product.image_url) %>
                 <div class="container">
                 <div class="carousel-caption">
+                        <p><%= render partial: "layouts/info", flash: flash %>  </p>       
+
 <h1>Welcome to my App!</h1>
     <p>
     <% if user_signed_in? %>

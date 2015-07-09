@@ -86,7 +86,6 @@
 /* Carousel base class */
 .carousel {
   height: 100%;
-  margin-bottom: 4em;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -199,9 +198,19 @@ footer {
   margin-top: 1em;
 }
 
+/* MAIN SECTION
+-------------------------------------------------- */
 
-.main-section {
+
+.main {
   text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding-bottom: 2em;
+}
+
+.main-section h2 {
+  margin-top: 2em;
 }
 
 #message.form-control {

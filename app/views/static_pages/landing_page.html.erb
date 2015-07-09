@@ -1,9 +1,10 @@
+
 <% if user_signed_in? && Product.exists? %>
 <%= render 'layouts/main' %>
 <% else %>
 <%= render 'layouts/lander' %>
 <% end %>  
-
+<div class="main">
 <div class="container main-section">
 <div class="row">
 <div class="col-lg-4 col-md-12 col-xs-12">
@@ -28,4 +29,8 @@
 <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 </div>
 </div>
+</div>
+</div>
+<div class="coffeebeans">
+	
 </div>
