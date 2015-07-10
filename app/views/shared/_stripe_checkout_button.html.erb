@@ -1,28 +1,8 @@
-<%= form_tag payments_path do %>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
-  <%= hidden_field_tag 'stripeToken' %>
-  <%= hidden_field_tag 'stripeEmail' %>
-  <button id="customButton" class="btn btn-large btn-primary">Buy Now</button>
-   <script>
-      var handler = StripeCheckout.configure({
-      key: "<%= Rails.configuration.stripe[:publishable_key]%>",
-      image: '/assets/swiftax1.png',
-      token: function(token, args) {
-            document.getElementById("stripeToken").value = token.id;                              
-            document.getElementById("stripeEmail").value = token.email;
-            document.getElementById("chargeForm").submit();
-          }
-        });
-
-      document.getElementById('customButton').addEventListener('click', function(e) {
-        // Open Checkout with further options
-        handler.open({
-          name: 'Coffee and More',
-          description: 'Product ($60.00)',
-          amount: 60*100,
-          shippingAddress: true
-        });
-        e.preventDefault();
-      });
-    </script>
-<% end %>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key]%>"
+    data-amount="2000"
+    data-name="Demo Site"
+    data-description="2 widgets ($20.00)"
+    data-image="/assets/swiftax1.png">
+  </script>
