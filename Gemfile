@@ -17,6 +17,7 @@ gem 'rolify'
 gem 'ratyrate'
 gem 'hirb'
 gem 'will_paginate'
+gem 'stripe'
 
 
 # Use ActiveModel has_secure_password
