@@ -1,8 +1,9 @@
 <%= form_tag payments_path do %>
   <script src="https://checkout.stripe.com/checkout.js"></script>
-  <%= hidden_field_tag 'stripeToken' %>
-  <%= hidden_field_tag 'stripeEmail' %>
+  = hidden_field_tag 'stripeToken'
+  = hidden_field_tag 'stripeEmail'
   <button id="customButton" class="btn btn-large btn-primary">Buy Now</button>
+
    <script>
       var handler = StripeCheckout.configure({
       key: "<%= Rails.configuration.stripe[:publishable_key]%>",

@@ -17,7 +17,7 @@ gem 'rolify'
 gem 'ratyrate'
 gem 'hirb'
 gem 'will_paginate'
-gem 'stripe'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem "figaro"
 
 
