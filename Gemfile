@@ -18,6 +18,7 @@ gem 'ratyrate'
 gem 'hirb'
 gem 'will_paginate'
 gem 'stripe'
+gem "figaro"
 
 
 # Use ActiveModel has_secure_password

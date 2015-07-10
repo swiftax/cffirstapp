@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations'}
   
-  
+  resources :payments
 
   resources :products do
     resources :comments
