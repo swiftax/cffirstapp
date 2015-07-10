@@ -17,6 +17,7 @@ gem 'rolify'
 gem 'ratyrate'
 gem 'hirb'
 gem 'will_paginate'
+gem 'factory_girl_rails'
 
 
 # Use ActiveModel has_secure_password
