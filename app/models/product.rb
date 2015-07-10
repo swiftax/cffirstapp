@@ -4,6 +4,8 @@ class Product < ActiveRecord::Base
 	belongs_to :user
 	validates :name, presence:true 
 
+	validates :price, :numericality => { :greater_than => 0 }
+
 	def average_rating
 		comments.average(:rating).to_f
 	end 
