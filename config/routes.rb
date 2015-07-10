@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
 
+  post '/payments/create'
+
   devise_for :users, :controllers => { registrations: 'registrations'}
   
-resources :payments, only: [:index, :new, :create]
+  resources :payments
 
   resources :products do
     resources :comments
