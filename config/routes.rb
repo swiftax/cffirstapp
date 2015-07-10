@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations'}
   
-  resources :payments
+resources :payments, only: [:create]
+  post 'payments/create'
 
   resources :products do
     resources :comments

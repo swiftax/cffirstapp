@@ -1,8 +1,8 @@
 class PaymentsController < ApplicationController
 	def create
 		token = params[:stripeToken]
-		product = Product.find(params[:product_id])
 		# Create the charge on Stripe's servers - this will charge teh user's card
+		
 		begin
 			charge = Stripe::Charge.create(
 				:amount => 2000,
