@@ -17,7 +17,6 @@ gem 'rolify'
 gem 'ratyrate'
 gem 'hirb'
 gem 'will_paginate'
-gem 'factory_girl_rails'
 
 
 # Use ActiveModel has_secure_password
@@ -31,16 +30,21 @@ gem 'factory_girl_rails'
 
 group :development, :test do 
 	gem 'sqlite3'
-  gem 'rspec-rails'
   gem 'factory_girl_rails'
-   gem 'guard-rspec'
-   gem 'capybara'
+    gem 'guard-rspec', require: false
    gem 'spring-commands-rspec'
   gem 'vcr'
 end
 
+group :development do
+  gem 'guard-spork'
+ gem 'spork-rails', github: 'railstutorial/spork-rails'
+end
+
 group :test do
-  gem 'webmock'
+  gem 'capybara'
+  gem 'rspec-rails'
+
 end
 
 group :production do
