@@ -7,28 +7,35 @@
     <div class="panel-heading"><h1>Listing Products </h1></div>
 <div class="panel-body">
     
-<table class="table">
+
+
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-12">
+  <table class="table products-table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
       <th>Image url</th>
+      <th>Image</th>
       <th>Color</th>
       <th>Price</th>
       <th>Pay</th>
       <th colspan="3">Actions</th>
     </tr>
   </thead>
-
   <tbody>
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
+        <td class="img-url"><%= product.image_url %></td>
+        <td class="product-image"><%= image_tag(product.image_url) %></td>
         <td><%= product.color %></td>
         <td>$<%= product.price %></td>
         <td><%= form_tag "/payments/create"  do %>
+       
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %></td>
         <td><%= link_to 'Show', product, class: "btn btn-primary" %></td>
@@ -40,6 +47,9 @@
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+</div>
 
 <br>
 </div>

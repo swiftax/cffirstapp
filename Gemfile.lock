@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/railstutorial/spork-rails.git
-  revision: 5db525af2f917047057f546bc1ac2574d1c6b11e
-  specs:
-    spork-rails (3.2.1)
-      spork (>= 1.0rc0)
-
-GIT
   remote: https://github.com/stripe/stripe-ruby
   revision: 8c6dc1a838db0d39d9083431f6a4a8287f25d814
   specs:
@@ -242,9 +235,10 @@ GEM
     shellany (0.0.1)
     slop (3.6.0)
     spork (1.0.0rc4)
+    spork-rails (4.0.0)
+      rails (>= 3.0.0, < 5)
+      spork (>= 1.0rc0)
     spring (1.3.6)
-    spring-commands-rspec (1.0.4)
-      spring (>= 0.9.1)
     sprockets (3.2.0)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
@@ -265,7 +259,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
-    vcr (2.9.3)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.1.3)
@@ -289,6 +282,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   figaro
+  guard
   guard-rspec
   guard-spork
   hirb
@@ -302,14 +296,13 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   sdoc
-  spork-rails!
+  spork
+  spork-rails
   spring
-  spring-commands-rspec
   sqlite3
   stripe!
   turbolinks
   uglifier
-  vcr
   web-console (~> 2.0)
   will_paginate
 

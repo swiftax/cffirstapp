@@ -33,19 +33,16 @@ gem "figaro"
 group :development, :test do 
 	gem 'sqlite3'
   gem 'factory_girl_rails'
-    gem 'guard-rspec', require: false
-   gem 'spring-commands-rspec'
-  gem 'vcr'
-end
-
-group :development do
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem "spork-rails"
   gem 'guard-spork'
- gem 'spork-rails', github: 'railstutorial/spork-rails'
+  gem 'spork'
 end
 
 group :test do
   gem 'capybara'
-  gem 'rspec-rails'
 
 end
 
@@ -68,5 +65,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+
 
 

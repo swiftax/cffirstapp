@@ -1,11 +1,6 @@
-require 'active_support'
-require 'active_support/core_ext'
-require 'active_support/deprecation'
 require 'rubygems'
+require 'rspec/core'
 require 'spork'
-require 'rspec/rails'
-
-
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
