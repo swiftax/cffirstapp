@@ -34,3 +34,4 @@ $(document).ready ->
   ]
   $('#tags').autocomplete source: availableTags
   return
+  
