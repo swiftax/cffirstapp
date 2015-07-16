@@ -9,6 +9,7 @@ gem 'coffee-rails'
 # gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootstrap-sass'
