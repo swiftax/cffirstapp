@@ -168,7 +168,25 @@
 .btn-primary:hover {
   background-color: #fff;
   color: #a55d2c;
-  border: 1px #fff solid;
+  border: 1px #000 solid;
+}
+
+.btn-primary:hover:active {
+  background-color: #fff;
+  color: #a55d2c;
+  border: 1px #000 solid;
+}
+
+
+.btn-primary:active {
+  background-color: #fff;
+  color: #a55d2c;
+}
+
+.btn-primary:focus {
+    background-color: #fff;
+    color: #000;
+    border: 2px #a55d2c solid;
 }
 
 .btn-default {
