@@ -222,9 +222,13 @@ footer {
 
 .main {
   text-align: center;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding-bottom: 2em;
+}
+
+hr {
+  border-top: #e2e2e2 1px solid;
 }
 
 .main-section h2 {
@@ -235,3 +239,24 @@ footer {
   height: 15em;
   resize: none;
 }
+
+.secondary {
+  background-color: #333;
+  color: #fff;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.secondary p {
+  margin-top: 2em;
+}
+
+/* LOGIN 
+-------------------------------------------------- */
+
+.login-box {
+  background-color: #fff;
+  color: #a55d2c;
+  border: #e1e1e1 solid 0.5em;
+}
+

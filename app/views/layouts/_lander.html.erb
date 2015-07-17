@@ -17,6 +17,7 @@
                 <div class="carousel-caption">
                         <p><%= render partial: "layouts/info", flash: flash %> </p>        
 
+<div class="login-box">
 <h1>Welcome to my App!</h1>
     <p>
     <% if user_signed_in? %>
@@ -29,6 +30,7 @@
 <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
 </p>
     <% end %>
+    </div>
                 </div>
                 </div>
             </div>
@@ -36,7 +38,8 @@
             <img class="second-slide" src="https://download.unsplash.com/photo-1422207134147-65fb81f59e38">
                 <div class="container">
                 <div class="carousel-caption">
-<h1>Welcome to my App!</h1>
+                <div class="login-box">
+<h1>What are you waiting for?</h1>
     <p>
     <% if user_signed_in? %>
     <%= link_to "New Product", new_product_path , class: "btn btn-primary btn-lg" %>
@@ -49,6 +52,7 @@
 <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
 </p>
     <% end %>
+    </div>
                 </div>
                 </div>
             </div>
@@ -56,7 +60,8 @@
             <img class="third-slide" src="https://download.unsplash.com/photo-1422310299561-e3b8b45d859f">
                 <div class="container">
                 <div class="carousel-caption">
-<h1>Welcome to my App!</h1>
+                <div class="login-box">
+<h1>Sign up now!</h1>
     <p>
     <% if user_signed_in? %>
     <%= link_to "New Product", new_product_path , class: "btn btn-primary btn-lg" %>
@@ -69,6 +74,7 @@
 <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
 </p>
     <% end %>
+    </div>
                 </div>
                 </div>
             </div>
