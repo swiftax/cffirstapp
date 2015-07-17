@@ -158,6 +158,9 @@
     font-size: 21px;
     line-height: 1.4;
   }
+  .login-box {
+  margin-bottom: -7em;
+  }
 }
 .btn-primary {
   background-color: #a55d2c;
@@ -259,4 +262,17 @@ hr {
   color: #a55d2c;
   border: #e1e1e1 solid 0.5em;
 }
+
+#form {
+width:100%;
+height:100%;
+font-weight:700;
+text-align:center;
+cursor:default; 
+background-color: #fff;
+margin-top: 5em;
+}
+
+
+
 

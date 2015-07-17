@@ -4,7 +4,10 @@
         </div>
 
         <div class="panel-body container">
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name) )  do |f| %><%= devise_error_messages! %>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name),
+                     :html => {:id => "new_user"},
+                     :format => :json,
+                     :remote => true  ) do |f| %><%= devise_error_messages! %>
             <div class="form-group">
                 <%= f.label :first_name %><br>
                 <%= f.text_field :first_name, class: "form-control" , autofocus: true %>
@@ -38,3 +41,17 @@
             <%= render "devise/shared/links" %>
         </div>
     </div>
+
+    <script>
+  $(document).ready(function() {
+    //form id
+    $('#new_user')
+    .bind('ajax:success', function(evt, data, status, xhr) {
+      //function called on status: 200 (for ex.)
+      console.log('success');
+    })
+    .bind("ajax:error", function(evt, xhr, status, error) {
+      //function called on status: 401 or 500 (for ex.)
+      console.log(xhr.responseText);
+    });
+  });</script>

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   post '/payments/create'
 
-  devise_for :users, :controllers => { registrations: 'registrations'}
+devise_for :users, :controllers => {users: 'sessions', registrations: 'registrations'} 
 
  devise_scope :user do
     get 'login', to: "devise/sessions#new", as: "login"

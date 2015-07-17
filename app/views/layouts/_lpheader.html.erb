@@ -33,7 +33,77 @@
         <% end %>
       </div>
       </div>
-    
+    <div class="container panel panel-default" id="form" style="display:none">
+        <div class="panel-heading">
+            <h2>Sign up</h2>
+        </div>
+
+        <div class="panel-body container">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name),
+                     :html => {:id => "form"},
+                     :format => :json,
+                     :remote => true  ) do |f| %><%= devise_error_messages! %>
+            <div class="form-group">
+                <%= f.label :first_name %><br>
+                <%= f.text_field :first_name, class: "form-control" , autofocus: true %>
+            </div>
+            <div class="form-group">
+                <%= f.label :last_name %><br>
+                <%= f.text_field :last_name, class: "form-control" , autofocus: true %>
+            </div>
+            <div class="form-group">
+                <%= f.label :email %><br>
+                <%= f.email_field :email, class: "form-control" , autofocus: true %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password %><% if @minimum_password_length %><em>(<%= @minimum_password_length %>
+                characters minimum)</em> <% end %><br>
+                <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password_confirmation %><br>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <%= f.submit "Sign up" , class: "btn btn-primary" %>
+            </div><% end %>
+        </div>
+
+        <div class="panel-footer">
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
+
+    <script>
+  $(document).ready(function() {
+    //form id
+    $('#form')
+    .bind('ajax:success', function(evt, data, status, xhr) {
+      //function called on status: 200 (for ex.)
+      console.log('success');
+    })
+    .bind("ajax:error", function(evt, xhr, status, error) {
+      //function called on status: 401 or 500 (for ex.)
+      console.log(xhr.responseText);
+    });
+  });</script>
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#form").hide();
+    });
+    $("#show").click(function(){
+        $("#form").show();
+    });
+});
+</script>
+
+<button id="hide" class="btn btn-primary">Hide</button>
+<button id="show" class="btn btn-primary">Show</button>
       </ul>
     </div><!-- /.navbar-collapse -->
 

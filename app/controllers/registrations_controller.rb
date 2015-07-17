@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-
+	respond_to :html, :json 
   def registration
     @first_name = params[:first_name]
     @email = params[:email]
