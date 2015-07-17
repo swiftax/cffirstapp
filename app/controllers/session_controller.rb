@@ -16,3 +16,4 @@ def create
   set_flash_message(:alert, :invalid)
   render json: flash[:alert], status: 401
 end
+end
