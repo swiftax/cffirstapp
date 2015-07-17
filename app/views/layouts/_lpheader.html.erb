@@ -99,11 +99,15 @@ $(document).ready(function(){
     $("#show").click(function(){
         $("#form").show();
     });
+    $( "#form" ).click(function() {
+  $( "#form" ).mouseleave();
+});
 });
 </script>
 
+
 <button id="hide" class="btn btn-primary">Hide</button>
-<button id="show" class="btn btn-primary btn-lg">Sign Up Now!</button>
+<button id="show" class="btn btn-primary">Sign Up Now!</button>
       </ul>
     </div><!-- /.navbar-collapse -->
 
