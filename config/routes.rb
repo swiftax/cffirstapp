@@ -12,6 +12,14 @@ Rails.application.routes.draw do
   post '/payments/create'
 
   devise_for :users, :controllers => { registrations: 'registrations'}
+
+ devise_scope :user do
+    get 'login', to: "devise/sessions#new", as: "login"
+    get 'logout', to: "devise/sessions#destroy", as: "logout"
+    get '/users/sign_out' => 'devise/sessions#destroy'     
+    get 'signup', to: "users#new", as: "signup"
+  end
+
   
   resources :payments
 
