@@ -6,8 +6,7 @@ gem 'rails'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
-gem 'therubyracer', platforms: :ruby
-gem 'sprockets_better_errors'
+#gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
