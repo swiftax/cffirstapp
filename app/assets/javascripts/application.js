@@ -16,6 +16,7 @@
 //= require jquery.turbolinks
 //= require jquery.raty
 //= require ratyrate
+//= require contact
 //= require turbolinks
 //= require_tree .
 
