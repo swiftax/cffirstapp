@@ -161,6 +161,14 @@
   .login-box {
   margin-bottom: -7em;
   }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: #fff;
+  border: #000 1px solid;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+  color: #000;
+  }
+
 }
 .btn-primary {
   background-color: #a55d2c;
