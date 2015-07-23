@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require jquery.turbolinks
+//= require bootstrap
 //= require jquery.raty
 //= require ratyrate
 //= require contact
