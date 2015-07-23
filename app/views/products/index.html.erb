@@ -32,8 +32,13 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
+<<<<<<< HEAD
+        <td class="img_url"><%= product.image_url %></td>
+        <td><%= image_tag(product.image_url) %></td>
+=======
         <td class="img-url"><%= product.image_url %></td>
         <td class="product-image"><%= image_tag(product.image_url) %></td>
+>>>>>>> a73469c02b5f1627f478ad16efb24173d205eecc
         <td><%= product.color %></td>
         <td>$<%= product.price %></td>
         <td><%= form_tag "/payments/create"  do %>

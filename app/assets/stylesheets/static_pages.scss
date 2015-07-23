@@ -158,17 +158,6 @@
     font-size: 21px;
     line-height: 1.4;
   }
-  .login-box {
-  margin-bottom: -7em;
-  }
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  background-color: #fff;
-  border: #000 1px solid;
-  }
-  .navbar-inverse .navbar-nav > li > a {
-  color: #000;
-  }
-
 }
 .btn-primary {
   background-color: #a55d2c;
@@ -233,13 +222,9 @@ footer {
 
 .main {
   text-align: center;
-  background-color: #fff;
-  color: #000;
+  background-color: #333;
+  color: #fff;
   padding-bottom: 2em;
-}
-
-hr {
-  border-top: #e2e2e2 1px solid;
 }
 
 .main-section h2 {
@@ -250,44 +235,3 @@ hr {
   height: 15em;
   resize: none;
 }
-
-.secondary {
-  background-color: #333;
-  color: #fff;
-  padding-bottom: 2em;
-  text-align: center;
-}
-
-.secondary p {
-  margin-top: 2em;
-}
-
-/* LOGIN 
--------------------------------------------------- */
-
-.login-box {
-  background-color: #fff;
-  color: #a55d2c;
-  border: #e1e1e1 solid 0.5em;
-}
-
-#form {
-width:100%;
-height:100%;
-font-weight:700;
-text-align:center;
-cursor:default; 
-background-color: #fff;
-margin-top: 5em;
-}
-
-
-
-#visible-comment,
-#charCount {
-  font-size: 2.5em;
-  font-style: italic; 
-  text-align: center;
-}
-
-
